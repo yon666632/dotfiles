@@ -1,0 +1,42 @@
+[include]
+    path = ~/.gitconfig.local
+[alias]
+	co = checkout
+	st = status -sb
+	ci = commit
+	co = checkout
+	w = whatchanged
+	b = branch
+	url = config --get remote.origin.url
+	graph = log --graph -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+	a = add
+	d = diff
+	df = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
+	pl = pull
+	plr = pull --rebase
+	ps = push
+	sh = stash
+	shp = stash pop
+	s = show
+	rh = reset HEAD
+	rc = rebase --continue
+	ba = branch -a
+	plod = pull origin develop
+	psod = push origin develop
+	cp = cherry-pick
+	cod = checkout develop
+	m = merge
+	mnf = merge --no-ff 
+	plo = pull origin
+	pso = push origin
+	bc = branch --contains
+	l = log --decorate=full
+	ds = diff --stat
+[color]
+	ui = auto
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+[push]
+	default = tracking
