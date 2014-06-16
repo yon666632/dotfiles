@@ -25,8 +25,9 @@
             (normal-top-level-add-subdirs-to-load-path))))))
 
 ;; 引数のディレクトリとそのサブディレクトリをload-pathに追加
-(add-to-load-path "elisp" "conf" "public_repos")
-
+;; conf,public_reposは必要に応じて追加
+;;(add-to-load-path "elisp" "conf" "public_repos")
+(add-to-load-path "elisp")
 (add-to-list 'exec-path "/usr/local/bin/" "/usr/bin")
 
 ;; Command-Key and Option-Key
