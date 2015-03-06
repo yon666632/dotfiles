@@ -1,4 +1,4 @@
-;; -*- mode: emacs-lisp; coding: utf-8; indent-tabs-mode: nil -*-
+/;; -*- mode: emacs-lisp; coding: utf-8; indent-tabs-mode: nil -*-
 ;; ===================================================================
 ;; 初期設定系
 ;; ===================================================================
@@ -29,6 +29,9 @@
 ;;(add-to-load-path "elisp" "conf" "public_repos")
 (add-to-load-path "elisp")
 (add-to-list 'exec-path "/usr/local/bin/" "/usr/bin")
+(when (string= system-name "O-04570-MAC.local")
+  (add-to-list 'exec-path (expand-file-name "/usr/local/Cellar"))
+  (add-to-list 'exec-path (expand-file-name "~/go/bin")))
 
 ;; Command-Key and Option-Key
 ;; (setq ns-command-modifier (quote meta))
@@ -432,7 +435,16 @@
             (define-key cperl-mode-map "[" 'electric-pair)
             (define-key cperl-mode-map "{" 'electric-pair)))
 
+(defun electric-pair ()
+  "Insert character pair without sournding spaces"
+  (interactive)
+  (let (parens-require-spaces)
+    (insert-pair)))
+
 (add-hook  'cperl-mode-hook 'perl-completion-hook)
+
+;; templateエンジンのxslateはhtmlとみなす
+(add-to-list 'auto-mode-alist '("\\.t[t|x]" . html-mode))
 
 ;; -------------------------
 ;; JSX
