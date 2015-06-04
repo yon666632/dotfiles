@@ -1,12 +1,4 @@
-emacs.d/howm/*/*/*.howm
-emacs.d/howm/*/*/*.txt
-emacs.d/howm/*.txt
-emacs.d/howm/en/*
-emacs.d/tramp
-emacs.d/backups/*
-emacs.d/auto-save-list/*
-emacs.d/public_repos/*
-emacs.d/ac-comphist.dat
 vim/.netrwhist*
 vim/backup/*
 vim/bundle/*
+vim/conf/local/*
