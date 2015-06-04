@@ -36,4 +36,6 @@ NeoBundle 'jiangmiao/simple-javascript-indenter'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'davidhalter/jedi-vim'
 NeoBundleCheck

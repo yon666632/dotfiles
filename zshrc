@@ -120,8 +120,8 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
-# emacs 風キーバインドにする
-bindkey -e
+## emacs 風キーバインドにする
+#bindkey -e
 
 # フローコントロールを無効にする
 setopt no_flow_control
@@ -166,12 +166,6 @@ autoload bashcompinit
 bashcompinit
 source ~/.git-completion.bash
 
-export PYENV_ROOT="${HOME}/.pyenv"
-if [ -d "${PYENV_ROOT}" ]; then
-    export PATH=${PYENV_ROOT}/bin:$PATH
-    eval "$(pyenv init -)"
-fi
-
 # git completion
 autoload bashcompinit
 bashcompinit
@@ -180,10 +174,6 @@ source ~/.git-completion.bash
 #=================================================
 # ALIAS
 #=================================================
-alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
 alias tmux='tmuxx'
 #alias ls="ls -vF"
 alias l="ls"
