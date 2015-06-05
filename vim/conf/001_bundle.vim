@@ -41,4 +41,7 @@ NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'tomtom/tcomment_vim' " コメントON/OFFを手軽に実行
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'scrooloose/nerdtree' " ファイルをtree表示してくれる
+NeoBundle 'soramugi/auto-ctags.vim'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'Shougo/unite-outline'
 NeoBundleCheck
