@@ -17,8 +17,9 @@ set vb t_vb=                      "ビープ音を鳴らさない
 set clipboard=unnamed,autoselect  "OSのクリップボードを使用する
 set list                          "タブ文字、行末など不可視文字を表示する
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
-au BufRead,BufNew * match JpSpace /　/
+" Two-byte space
+autocmd ColorScheme * hi link TwoByteSpace Error
+autocmd VimEnter,WinEnter * let w:m_tbs = matchadd("TwoByteSpace", '　')
 set relativenumber                "その他の行は相対値
 set number                        "現在行は絶対値
 set ruler                         "カーソルが何行目の何列目に置かれているかを表示する
@@ -26,4 +27,3 @@ set nocompatible
 set nostartofline
 set autoindent                    "上の行にあわせてインデント入れる
 autocmd FileType * set formatoptions-=ro
-

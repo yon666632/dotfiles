@@ -25,7 +25,7 @@ NeoBundle 'surround.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'kien/ctrlp.vim'
-"NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'hotchpotch/perldoc-vim'
 NeoBundle 'vim-perl/vim-perl'
@@ -36,9 +36,9 @@ NeoBundle 'jiangmiao/simple-javascript-indenter'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'fatih/vim-go'
-"NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'tomtom/tcomment_vim' " コメントON/OFFを手軽に実行
-NeoBundle 'nathanaelkane/vim-indent-guides' " インデントに色を付けて見やすくする
-NeoBundle 'chriskempson/tomorrow-theme'
+NeoBundle 'chriskempson/vim-tomorrow-theme'
+NeoBundle 'scrooloose/nerdtree' " ファイルをtree表示してくれる
 NeoBundleCheck
