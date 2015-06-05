@@ -36,6 +36,9 @@ NeoBundle 'jiangmiao/simple-javascript-indenter'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'fatih/vim-go'
-NeoBundle 'Yggdroot/indentLine'
+"NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'tomtom/tcomment_vim' " コメントON/OFFを手軽に実行
+NeoBundle 'nathanaelkane/vim-indent-guides' " インデントに色を付けて見やすくする
+NeoBundle 'chriskempson/tomorrow-theme'
 NeoBundleCheck
