@@ -54,3 +54,10 @@ if [ -e ~/.vim ]; then
 else
     ln -s ~/dotfiles/vim ~/.vim
 fi
+
+# .vrapperrc
+if [ -e ~/.vrapperrc ]; then
+    echo "vim dir already exists."
+else
+    ln -s ~/dotfiles/vrapperrc ~/.vrapperrc
+fi
