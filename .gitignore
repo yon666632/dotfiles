@@ -2,4 +2,6 @@ vim/.netrwhist*
 vim/backup/*
 !.gitkeep
 vim/bundle/*
+!.gitkeep
 vim/conf/local/*
+!.gitkeep
