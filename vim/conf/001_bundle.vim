@@ -1,11 +1,15 @@
 "-------------------------------------------------------------------------------
 " BUNDLE系
 "-------------------------------------------------------------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Installation check.
 if neobundle#exists_not_installed_bundles()
@@ -44,4 +48,8 @@ NeoBundle 'scrooloose/nerdtree' " ファイルをtree表示してくれる
 NeoBundle 'soramugi/auto-ctags.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'Shougo/unite-outline'
+" You can specify revision/branch/tag.
+NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+call neobundle#end()
+filetype plugin indent on
 NeoBundleCheck
