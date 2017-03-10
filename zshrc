@@ -174,7 +174,7 @@ source ~/.git-completion.bash
 #=================================================
 # ALIAS
 #=================================================
-alias tmux='tmuxx'
+#alias tmux='tmuxx'
 #alias ls="ls -vF"
 alias l="ls"
 alias ll="ls -l"
