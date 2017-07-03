@@ -189,3 +189,16 @@ alias mkdir="mkdir -p"
 #alias rm="rmtrash"
 #alias rrm="/bin/rm"
 alias mkdir="mkdir -p"
+
+#=================================================
+# anyenv
+#=================================================
+if [ -d ${HOME}/.anyenv ] ; then
+    export PATH="$HOME/.anyenv/bin:$PATH"
+    eval "$(anyenv init -)"
+	for D in `ls $HOME/.anyenv/envs`
+	do
+		#export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
+		export PATH="$HOME/.anyenv/envs$D/shims:$PATH"
+	done
+fi
