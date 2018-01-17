@@ -1,4 +1,4 @@
 "=======================================================
 " colorscheme
 " ------------------------------------------------------
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
