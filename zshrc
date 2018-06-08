@@ -174,8 +174,6 @@ source ~/.git-completion.bash
 #=================================================
 # ALIAS
 #=================================================
-#alias tmux='tmuxx'
-#alias ls="ls -vF"
 alias l="ls"
 alias ll="ls -l"
 alias la="ls -la"
@@ -186,19 +184,16 @@ alias ga="g a"
 alias gc="g co"
 alias p="pwd"
 alias mkdir="mkdir -p"
-#alias rm="rmtrash"
-#alias rrm="/bin/rm"
-alias mkdir="mkdir -p"
+alias vim="nvim"
 
-#=================================================
-# anyenv
-#=================================================
-if [ -d ${HOME}/.anyenv ] ; then
-    export PATH="$HOME/.anyenv/bin:$PATH"
-    eval "$(anyenv init -)"
-	for D in `ls $HOME/.anyenv/envs`
-	do
-		#export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
-		export PATH="$HOME/.anyenv/envs$D/shims:$PATH"
-	done
-fi
+##=================================================
+## anyenv
+##=================================================
+#if [ -d ${HOME}/.anyenv ] ; then
+#    export PATH="$HOME/.anyenv/bin:$PATH"
+#    eval "$(anyenv init -)"
+#    for D in `ls $HOME/.anyenv/envs`
+#    do
+#        export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
+#    done
+#fi

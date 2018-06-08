@@ -1,30 +1,18 @@
-"-------------------------------------------------------------------------------
-" キーマッピング用
-" Mapping <jump-tag>
-"-------------------------------------------------------------------------------
-" コマンド       ノーマルモード 挿入モード コマンドラインモード ビジュアルモード
-" map/noremap           @            -              -                  @
-" nmap/nnoremap         @            -              -                  -
-" imap/inoremap         -            @              -                  -
-" cmap/cnoremap         -            -              @                  -
-" vmap/vnoremap         -            -              -                  @
-" map!/noremap!         -            @              @                  -
-"-------------------------------------------------------------------------------
 "insertモード時のESCをリマップ
 inoremap <c-[> <esc>
+
+"x キー削除でデフォルトレジスタに入れない
+nnoremap x "_x
+vnoremap x "_x
+
+"vv で行末まで選択
+vnoremap v ^$h
 
 "emacs like
 map! <c-a> <home>
 map! <c-e> <end>
 nnoremap <c-a> <home>
 nnoremap <c-e> <end>
-""
-"インサートモードでも移動
-inoremap <c-d> <delete>
-inoremap <c-j> <down>
-inoremap <c-k> <up>
-inoremap <c-h> <left>
-inoremap <c-l> <right>
 
 "画面切り替え
 nnoremap <c-j> <c-w>j
