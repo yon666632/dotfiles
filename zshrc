@@ -162,14 +162,12 @@ setopt extended_glob
 bindkey '^R' history-incremental-pattern-search-backward
 
 # git completion
-autoload bashcompinit
-bashcompinit
-source ~/.git-completion.bash
-
-# git completion
-autoload bashcompinit
-bashcompinit
-source ~/.git-completion.bash
+#autoload bashcompinit
+#bashcompinit
+##source ~/.git-completion.bash
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+autoload -U compinit
+compinit -u
 
 #=================================================
 # ALIAS
@@ -193,11 +191,4 @@ alias mkdir="mkdir -p"
 #=================================================
 # anyenv
 #=================================================
-if [ -d ${HOME}/.anyenv ] ; then
-    export PATH="$HOME/.anyenv/bin:$PATH"
-    eval "$(anyenv init -)"
-	for D in `ls $HOME/.anyenv/envs`
-	do
-		export PATH="$HOME/.anyenv/envs$D/shims:$PATH"
-	done
-fi
+eval "$(anyenv init -)"
