@@ -8,5 +8,7 @@ repo = 'kien/ctrlp.vim'
 repo = 'rking/ag.vim'
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+# [[plugins]]
+# repo = 'tomasr/molokai'
 [[plugins]]
-repo = 'chriskempson/vim-tomorrow-theme'
+repo = 'jacoborus/tender.vim'

@@ -9,7 +9,7 @@ set autoread                      "他で書き換えられた場合、自動で
 set hidden                        "編集中でも他のファイルを開けるようにする
 set backspace=indent,eol,start    "backspaceで消せるようにする
 set vb t_vb=                      "ビープ音を鳴らさない
-set clipboard=unnamed,autoselect  "OSのクリップボードを使用する
+set clipboard+=unnamedplus        "OSのクリップボードを使用する
 set list                          "タブ文字、行末など不可視文字を表示する
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 " Two-byte space
