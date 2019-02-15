@@ -1,6 +1,6 @@
 syntax on
 
-set runtimepath+=~/.vim/
+set runtimepath+=~/.config/nvim
 runtime! conf/*.vim
 runtime! conf/bundle/*.vim
 runtime! conf/bundle/00_util/*.vim
