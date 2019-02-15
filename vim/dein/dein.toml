@@ -1,14 +1,4 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-[[plugins]]
-repo = 'kien/ctrlp.vim'
-[[plugins]]
 repo = 'rking/ag.vim'
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-# [[plugins]]
-# repo = 'tomasr/molokai'
-[[plugins]]
-repo = 'jacoborus/tender.vim'
