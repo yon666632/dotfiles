@@ -13,15 +13,15 @@ else
 fi
 
 # .vim dir
-if [ -e ~/.vim ]; then
+if [ -e ~/.config/nvim ]; then
     echo "vim dir already exists."
 else
-    ln -s ~/dotfiles/vim ~/.vim
+    ln -s ~/dotfiles/vim ~/.config/nvim
 fi
 
 # .vrapperrc
 if [ -e ~/.vrapperrc ]; then
-    echo "vim dir already exists."
+    echo "vrapperrc already exists."
 else
     ln -s ~/dotfiles/vrapperrc ~/.vrapperrc
 fi

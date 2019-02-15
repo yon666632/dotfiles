@@ -18,11 +18,14 @@ set nocompatible
 set nostartofline
 autocmd FileType * setlocal formatoptions-=ro
 
-" backup,swap,undo
-set nobackup
-set noswapfile
-set undodir=$HOME/.vim/undo
+" backup,swap,undo,viminfo
+set backup
+set backupdir=$HOME/.config/nvim/backup
+set swapfile
+set directory=$HOME/.config/nvim/swap
 set undofile
+set undodir=$HOME/.config/nvim/undo
+set viminfo+=n~/.config/nvim/viminfo/.viminfo
 
 "insertモード時のESCをリマップ
 inoremap <c-[> <esc>
