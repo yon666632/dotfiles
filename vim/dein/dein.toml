@@ -3,4 +3,4 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'rking/ag.vim'
 [[plugins]]
-repo = 'sjl/badwolf'
+repo = 'flazz/vim-colorschemes'

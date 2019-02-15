@@ -9,4 +9,6 @@ vim/bundle/*
 !.gitkeep
 vim/conf/local/*
 !.gitkeep
+vim/viminfo/*
+!.gitkeep
 .DS_Store
