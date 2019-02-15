@@ -47,6 +47,6 @@
   generic = g move-first-line
   generic = G move-last-line
 [core]
-	editor = vim -c \"set fenc=utf-8\"
+	editor = /usr/local/bin/nvim
 [user]
 	useConfigOnly = true

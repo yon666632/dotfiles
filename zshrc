@@ -172,8 +172,6 @@ compinit -u
 #=================================================
 # ALIAS
 #=================================================
-#alias tmux='tmuxx'
-#alias ls="ls -vF"
 alias l="ls"
 alias ll="ls -l"
 alias la="ls -la"
@@ -184,9 +182,7 @@ alias ga="g a"
 alias gc="g co"
 alias p="pwd"
 alias mkdir="mkdir -p"
-#alias rm="rmtrash"
-#alias rrm="/bin/rm"
-alias mkdir="mkdir -p"
+alias vim="nvim"
 
 #=================================================
 # anyenv
