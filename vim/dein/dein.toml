@@ -4,3 +4,9 @@ repo = 'Shougo/dein.vim'
 repo = 'rking/ag.vim'
 [[plugins]]
 repo = 'flazz/vim-colorschemes'
+[[plugins]]
+repo = 'scrooloose/syntastic'
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+[[plugins]]
+repo = 'zchee/deoplete-jedi'
