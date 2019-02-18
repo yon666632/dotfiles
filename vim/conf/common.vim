@@ -16,6 +16,7 @@ set number                        "現在行は絶対値
 set ruler                         "カーソルが何行目の何列目に置かれているかを表示する
 set nocompatible
 set nostartofline
+set mouse=a                       "マウス使えるようにする
 autocmd FileType * setlocal formatoptions-=ro
 
 " backup,swap,undo,viminfo
