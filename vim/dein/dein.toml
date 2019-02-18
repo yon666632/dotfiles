@@ -10,3 +10,9 @@ repo = 'scrooloose/syntastic'
 repo = 'Shougo/deoplete.nvim'
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
+[[plugins]]
+repo = 'billyvg/tigris.nvim'
+on_ft = ['javascript', 'javascript.jsx']
+hook_post_update = '''
+  let g:dein#plugin.build = './install.sh'
+'''
