@@ -1,5 +1,6 @@
 vim/.netrwhist*
 vim/backup/*
+vim/colors
 !.gitkeep
 vim/swap/*
 !.gitkeep
