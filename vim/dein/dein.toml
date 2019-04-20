@@ -3,16 +3,7 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'rking/ag.vim'
 [[plugins]]
-repo = 'flazz/vim-colorschemes'
-[[plugins]]
-repo = 'scrooloose/syntastic'
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-[[plugins]]
-repo = 'zchee/deoplete-jedi'
-[[plugins]]
-repo = 'billyvg/tigris.nvim'
-on_ft = ['javascript', 'javascript.jsx']
-hook_post_update = '''
-  let g:dein#plugin.build = './install.sh'
+repo = 'jacoborus/tender.vim'
+hook_add = '''
+  colorscheme tender
 '''
