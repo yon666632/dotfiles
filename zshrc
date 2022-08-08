@@ -185,6 +185,6 @@ alias mkdir="mkdir -p"
 alias vim="nvim"
 
 #=================================================
-# anyenv
+# asdf
 #=================================================
-eval "$(anyenv init -)"
+. /usr/local/opt/asdf/libexec/asdf.sh
