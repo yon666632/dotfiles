@@ -162,12 +162,7 @@ setopt extended_glob
 bindkey '^R' history-incremental-pattern-search-backward
 
 # git completion
-#autoload bashcompinit
-#bashcompinit
-##source ~/.git-completion.bash
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
-autoload -U compinit
-compinit -u
 
 #=================================================
 # ALIAS
@@ -176,15 +171,18 @@ alias l="ls"
 alias ll="ls -l"
 alias la="ls -la"
 alias g="git"
-alias gits="g st"
-alias gd="g d"
-alias ga="g a"
-alias gc="g co"
 alias p="pwd"
 alias mkdir="mkdir -p"
 alias vim="nvim"
+alias brew='PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin brew'
 
 #=================================================
-# anyenv
+# zplug
 #=================================================
-eval "$(anyenv init -)"
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+#=================================================
+# asdf
+#=================================================
+. /usr/local/opt/asdf/asdf.sh
