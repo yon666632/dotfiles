@@ -185,4 +185,4 @@ source $ZPLUG_HOME/init.zsh
 #=================================================
 # asdf
 #=================================================
-. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/libexec/asdf.sh
