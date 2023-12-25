@@ -32,7 +32,7 @@
 	bc = branch --contains
 	l = log --decorate=full
 	ds = diff --stat
-    dw = diff -w
+	dw = diff -w
 [color]
 	ui = auto
 	status = auto
