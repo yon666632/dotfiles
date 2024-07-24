@@ -186,3 +186,21 @@ source $ZPLUG_HOME/init.zsh
 # asdf
 #=================================================
 . /usr/local/opt/asdf/libexec/asdf.sh
+
+#=================================================
+# auto-complete
+#=================================================
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    compinit
+fi
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/usr/local/bin/aws_completer' aws
+export PATH="/usr/local/opt/postgresql@16/bin:$PATH"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
