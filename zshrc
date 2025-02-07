@@ -92,36 +92,10 @@ setopt prompt_subst
 
 RPROMPT='[`rprompt-git-current-branch`%~]'
 
-## VCSの情報を取得するzshの便利関数 vcs_infoを使う
-#autoload -Uz vcs_info
-#
-## プロンプト
-## 1行表示
-## PROMPT="%~ %# "
-## 2行表示
-#PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
-#%# "
-#
-## 表示フォーマットの指定
-## %b ブランチ情報
-## %a アクション名(mergeなど)
-#zstyle ':vcs_info:*' formats '[%b]'
-#zstyle ':vcs_info:*' actionformats '[%b|%a]'
-#precmd () {
-#    psvar=()
-#    LANG=en_US.UTF-8 vcs_info
-#    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-#}
-## バージョン管理されているディレクトリにいれば表示，そうでなければ非表示
-#RPROMPT="%1(v|%F{red}%1v%f|)"
-
 # ヒストリの設定
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
-
-## emacs 風キーバインドにする
-#bindkey -e
 
 # フローコントロールを無効にする
 setopt no_flow_control
@@ -134,6 +108,7 @@ setopt no_beep
 
 # cd したら自動的にpushdする
 setopt auto_pushd
+
 # 重複したディレクトリを追加しない
 setopt pushd_ignore_dups
 
@@ -161,9 +136,6 @@ setopt extended_glob
 # ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
 bindkey '^R' history-incremental-pattern-search-backward
 
-# git completion
-fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
-
 #=================================================
 # ALIAS
 #=================================================
@@ -173,34 +145,3 @@ alias la="ls -la"
 alias g="git"
 alias p="pwd"
 alias mkdir="mkdir -p"
-alias vim="nvim"
-alias brew='PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin brew'
-
-#=================================================
-# zplug
-#=================================================
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
-
-#=================================================
-# asdf
-#=================================================
-. /usr/local/opt/asdf/libexec/asdf.sh
-
-#=================================================
-# auto-complete
-#=================================================
-if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-    autoload -Uz compinit
-    compinit
-fi
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-complete -C '/usr/local/bin/aws_completer' aws
-export PATH="/usr/local/opt/postgresql@16/bin:$PATH"
-
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
