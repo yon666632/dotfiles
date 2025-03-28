@@ -1,0 +1,61 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  become: no
+  vars:
+    homebrew_packages:
+      - { name: ansible }
+      - { name: gibo }
+      - { name: git }
+      - { name: jq }
+      #- { name: mas }
+      - { name: tree }
+      - { name: wget }
+      - { name: yq }
+      - { name: asdf }
+      - { name: curl }
+      - { name: kubernetes-cli }
+      - { name: neovim }
+    homebrew_cask_packages:
+      - { name: alfred }
+      - { name: firefox }
+      - { name: google-chrome }
+      - { name: iterm2 }
+      - { name: slack }
+      - { name: visual-studio-code }
+      - { name: zoom }
+      - { name: 1password }
+      - { name: microsoft-teams }
+      - { name: google-drive }
+      - { name: amazon-music }
+    mac_app_store_apps:
+      - { id: 497799835 } # Xcode
+
+  tasks:
+    # brew update
+    - name: update homebrew
+      community.general.homebrew:
+        update_homebrew: yes
+
+    # brew
+    - name: brew install
+      community.general.homebrew:
+        name: '{{ item.name }}'
+        state: present
+      with_items: '{{ homebrew_packages }}'
+
+    # cask
+    - name: install homebrew cask packages
+      community.general.homebrew_cask:
+        name: '{{ item.name }}'
+        state: present
+        install_options: 'appdir=/Applications'
+      with_items: '{{ homebrew_cask_packages }}'
+
+    ## mac app store
+    #- name: install mac app store apps
+    #  community.general.mas:
+    #    id: '{{ item.id }}'
+    #    state: present
+    #  with_items: '{{ mac_app_store_apps }}'
