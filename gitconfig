@@ -47,7 +47,7 @@
   generic = g move-first-line
   generic = G move-last-line
 [core]
-	editor = /usr/local/bin/nvim
+	editor = /opt/homebrew/bin/nvim
 [user]
 	useConfigOnly = true
 [init]

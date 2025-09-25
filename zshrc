@@ -146,3 +146,20 @@ alias g="git"
 alias p="pwd"
 alias mkdir="mkdir -p"
 alias vim="nvim"
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# append completions to fpath
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
+PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
