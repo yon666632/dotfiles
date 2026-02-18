@@ -13,11 +13,12 @@
       - { name: tree }
       - { name: wget }
       - { name: yq }
-      - { name: asdf }
+      - { name: mise }
+      #- { name: asdf }
       - { name: curl }
       - { name: kubernetes-cli }
       - { name: neovim }
-      - { name: podman }
+      #- { name: podman }
       - { name: docker }
       - { name: hadolint }
       - { name: helm }
@@ -26,7 +27,7 @@
       - { name: mysql }
       - { name: mysql-client }
       - { name: oniguruma }
-      - { name: podman-compose }
+      #- { name: podman-compose }
       - { name: swagger-codegen }
       - { name: the_silver_searcher }
       - { name: tree }
@@ -35,7 +36,7 @@
       - { name: gawk }
     homebrew_cask_packages:
       - { name: alfred }
-      - { name: firefox }
+      #- { name: firefox }
       - { name: google-chrome }
       - { name: iterm2 }
       - { name: slack }
@@ -45,9 +46,9 @@
       - { name: microsoft-teams }
       - { name: google-drive }
       - { name: amazon-music }
-      - { name: flutter }
+      #- { name: flutter }
       - { name: keka }
-      - { name: podman-desktop }
+      #- { name: podman-desktop }
     mac_app_store_apps:
       - { id: 497799835 } # Xcode
 

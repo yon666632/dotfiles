@@ -153,6 +153,7 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # append completions to fpath
 fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+fpath=(/path/to/homebrew/share/zsh-completions $fpath)
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
 
@@ -162,4 +163,6 @@ PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
 
-[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
+export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
