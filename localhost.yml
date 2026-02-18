@@ -34,6 +34,8 @@
       - { name: tree-sitter }
       - { name: yq }
       - { name: gawk }
+    homebrew_cask_packages_not_app:
+      - { name: claude-code }
     homebrew_cask_packages:
       - { name: alfred }
       #- { name: firefox }
@@ -64,6 +66,13 @@
         name: '{{ item.name }}'
         state: present
       with_items: '{{ homebrew_packages }}'
+
+    # cask(/Applicationにいれないもの)
+    - name: install homebrew cask packages
+      community.general.homebrew_cask:
+        name: '{{ item.name }}'
+        state: present
+      with_items: '{{ homebrew_cask_packages_not_app }}'
 
     # cask
     - name: install homebrew cask packages
